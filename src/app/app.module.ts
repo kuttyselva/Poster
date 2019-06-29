@@ -5,19 +5,26 @@ import { AppComponent } from './app.component';
 import { UserComponent } from './components/user/user.component';
 import { UsersComponent } from './components/users/users.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
-
+import { DataService } from './service/data.service';
+import { PostsComponent } from './components/posts/posts.component';
+import { PostService } from './service/post.service';
+import {HttpClientModule} from '@angular/common/http';
+import { PostFormComponent } from './components/post-form/post-form.component';
 @NgModule({
   declarations: [
     AppComponent,
     UserComponent,
     UsersComponent,
-    NavbarComponent
+    NavbarComponent,
+    PostsComponent,
+    PostFormComponent
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [DataService,PostService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
