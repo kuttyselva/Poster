@@ -1,0 +1,8 @@
+<div *ngIf="post" class="card">
+    <div class="card-body">
+        <h3 class="display-3 text-center mb-5">{{post.title}}</h3>
+        <p class="lead text-center">{{post.body}}</p>
+    </div>
+    <a [routerLink]="['/posts']" class="btn btn-light btn-block mb-3" >Back</a>
+
+</div>
